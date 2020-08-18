@@ -28,14 +28,14 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetMouseButton(0))
         {
             spaceDown = true;
             hasReleased = false;
             currentChargeAngle = club.eulerAngles.z;
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetMouseButtonUp(0))
         {
             hasReleased = true;
             spaceDown = false;

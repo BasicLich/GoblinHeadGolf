@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R) && FindObjectOfType<Player>().GetComponent<Player>().swingFinished)
+        if(Input.GetMouseButtonDown(1) && FindObjectOfType<Player>().GetComponent<Player>().swingFinished)
         {
             var pos = FindObjectOfType<Player>().transform.position;
             Destroy(FindObjectOfType<Player>().gameObject);
