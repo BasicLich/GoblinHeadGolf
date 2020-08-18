@@ -42,9 +42,10 @@ public class Player : MonoBehaviour
             maxCharge = false;
         }
 
-        if (hasReleased && club.eulerAngles.z > 260 + (90 * (80 / currentChargeAngle)))
+        if (hasReleased && !swingFinished && club.eulerAngles.z > 260 + (90 * (80 / currentChargeAngle)))
         {
             swingFinished = true;
+            FindObjectOfType<GameController>().Score();
         }
 
         if(!hasReleased && club.eulerAngles.z < 80)
@@ -53,7 +54,6 @@ public class Player : MonoBehaviour
         }
 
         power = Mathf.Pow(225f / currentChargeAngle, 2);
-        Debug.Log(power);
 
     }
 
@@ -69,8 +69,6 @@ public class Player : MonoBehaviour
         {
             club.RotateAround(swingPoint.position, Vector3.forward, swingAddAmount * speedMultiplier * Time.deltaTime);
         }
-
-        Debug.Log(club.eulerAngles.ToString());
 
     }
 }
