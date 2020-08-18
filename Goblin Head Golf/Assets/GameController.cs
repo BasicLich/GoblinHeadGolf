@@ -18,10 +18,13 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI pointsText;
     public int points = 0;
 
+    public GameObject scorePanel;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        scorePanel.SetActive(false);
         UpdateUIImages();
         Instantiate(head, FindObjectOfType<Player>().headSpawn, Quaternion.Euler(0f, 0f, 270f));
         pointsText.text = points.ToString();
@@ -78,7 +81,8 @@ public class GameController : MonoBehaviour
 
     public void Win()
     {
-        Debug.LogWarning("Yeah!");
-        Time.timeScale = 0f;
+        FindObjectOfType<Player>().hasWon = true;
+        scorePanel.SetActive(true);
+        scorePanel.GetComponent<ScorePanel>().SetPanel(points);
     }
 }

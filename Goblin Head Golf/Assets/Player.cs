@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
 
     public float power = 0f;
 
+    public bool hasWon = false;
+
     private void Awake()
     {
         headSpawn = headSpawnObj.transform.position;
@@ -28,33 +30,35 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if(!hasWon)
         {
-            spaceDown = true;
-            hasReleased = false;
-            currentChargeAngle = club.eulerAngles.z;
+            if (Input.GetMouseButton(0))
+            {
+                spaceDown = true;
+                hasReleased = false;
+                currentChargeAngle = club.eulerAngles.z;
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                hasReleased = true;
+                spaceDown = false;
+                maxCharge = false;
+            }
+
+            if (hasReleased && !swingFinished && club.eulerAngles.z > 260 + (90 * (80 / currentChargeAngle)))
+            {
+                swingFinished = true;
+                FindObjectOfType<GameController>().Score();
+            }
+
+            if (!hasReleased && club.eulerAngles.z < 80)
+            {
+                maxCharge = true;
+            }
+
+            power = Mathf.Pow(225f / currentChargeAngle, 2);
         }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            hasReleased = true;
-            spaceDown = false;
-            maxCharge = false;
-        }
-
-        if (hasReleased && !swingFinished && club.eulerAngles.z > 260 + (90 * (80 / currentChargeAngle)))
-        {
-            swingFinished = true;
-            FindObjectOfType<GameController>().Score();
-        }
-
-        if(!hasReleased && club.eulerAngles.z < 80)
-        {
-            maxCharge = true;
-        }
-
-        power = Mathf.Pow(225f / currentChargeAngle, 2);
-
     }
 
     private void FixedUpdate()

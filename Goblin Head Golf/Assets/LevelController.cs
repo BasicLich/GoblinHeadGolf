@@ -6,15 +6,10 @@ public class LevelController : MonoBehaviour
 {
     public static LevelController instance;
 
-    public int hole1score = 0;
-    public int hole2score = 0;
-    public int hole3score = 0;
-    public int hole4score = 0;
-    public int hole5score = 0;
-    public int hole6score = 0;
-    public int hole7score = 0;
-    public int hole8score = 0;
-    public int hole9score = 0;
+    public int[] scores;
+    public int[] pars = { 3, 4, 1, 1, 1, 1, 1, 1, 1 };
+
+    public int currentHole = 0;
 
     private void Awake()
     {
@@ -29,6 +24,63 @@ public class LevelController : MonoBehaviour
         }
 
         DontDestroyOnLoad(this);
+        
+        scores = new int[9];
+
+    }
+
+    public string GetHoleScore(int hole)
+    {
+        var score = scores[hole];
+        if(score == 0)
+        {
+            return "-";
+        } else
+        {
+            return score.ToString();
+        }
+    }
+
+    public string GetToPar(int hole)
+    {
+        var score = scores[hole];
+        if (score == 0)
+        {
+            return "-";
+        }
+        else
+        {
+            return (score - pars[hole]).ToString(); 
+        }
+    }
+
+    public string GetTotalScore()
+    {
+        var sum = 0;
+        for (int i = 0; i < scores.Length; i++)
+        {
+            sum += scores[i];
+        }
+
+        return sum.ToString();
+    }
+
+    public string GetTotalToPar()
+    {
+        var sumHoles = 0;
+        for (int i = 0; i < scores.Length; i++)
+        {
+            sumHoles += scores[i];
+        }
+
+        var sumPars = 0;
+        for (int i = 0; i < currentHole + 1; i++)
+        {
+            sumPars += pars[i];
+        }
+
+        return (sumHoles - sumPars).ToString();
+        
     }
 
 }
