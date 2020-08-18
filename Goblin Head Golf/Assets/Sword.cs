@@ -23,6 +23,7 @@ public class Sword : MonoBehaviour
         {
             collision.gameObject.GetComponent<Head>().EnableRenderer();
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(clubAngle.normalized * clubForce * FindObjectOfType<Player>().power);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddTorque(-0.01f);
             hasHit = true;
             FindObjectOfType<Body>().EnablePS();
         }
@@ -34,13 +35,13 @@ public class Sword : MonoBehaviour
         {
             case 0:
                 clubAngle = new Vector2(0.5f, 0.5f);
-                clubForce = 2f;
+                clubForce = 1.8f;
                 GetComponent<SpriteRenderer>().sprite = sprites[0];
                 GetComponent<SpriteRenderer>().color = normal;
                 break;
             case 1:
                 clubAngle = new Vector2(0.3f, 0.7f);
-                clubForce = 2f;
+                clubForce = 1.8f;
                 GetComponent<SpriteRenderer>().sprite = sprites[1];
                 GetComponent<SpriteRenderer>().color = normal;
                 break;
@@ -52,7 +53,7 @@ public class Sword : MonoBehaviour
                 break;
             default:
                 clubAngle = new Vector2(0.5f, 0.5f);
-                clubForce = 2f;
+                clubForce = 1f;
                 GetComponent<SpriteRenderer>().sprite = sprites[0];
                 GetComponent<SpriteRenderer>().color = normal;
                 break;

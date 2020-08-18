@@ -75,4 +75,10 @@ public class GameController : MonoBehaviour
         points++;
         pointsText.text = points.ToString();
     }
+
+    public void Win()
+    {
+        Debug.LogWarning("Yeah!");
+        Time.timeScale = 0f;
+    }
 }
