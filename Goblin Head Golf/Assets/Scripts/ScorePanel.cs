@@ -9,35 +9,12 @@ public class ScorePanel : MonoBehaviour
 {
     public TextMeshProUGUI topText;
 
-    public TextMeshProUGUI scoreHole1;
-    public TextMeshProUGUI toParHole1;
-
-    public TextMeshProUGUI scoreHole2;
-    public TextMeshProUGUI toParHole2;
-
-    public TextMeshProUGUI scoreHole3;
-    public TextMeshProUGUI toParHole3;
-
-    public TextMeshProUGUI scoreHole4;
-    public TextMeshProUGUI toParHole4;
-
-    public TextMeshProUGUI scoreHole5;
-    public TextMeshProUGUI toParHole5;
-
-    public TextMeshProUGUI scoreHole6;
-    public TextMeshProUGUI toParHole6;
-
-    public TextMeshProUGUI scoreHole7;
-    public TextMeshProUGUI toParHole7;
-
-    public TextMeshProUGUI scoreHole8;
-    public TextMeshProUGUI toParHole8;
-
-    public TextMeshProUGUI scoreHole9;
-    public TextMeshProUGUI toParHole9;
-
     public TextMeshProUGUI totalScore;
     public TextMeshProUGUI totalToPar;
+
+    public TextMeshProUGUI[] scoresHole;
+    public TextMeshProUGUI[] scoresToPar;
+
 
     private LevelController levelCont;
     private void Awake()
@@ -49,6 +26,19 @@ public class ScorePanel : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            if(SceneManager.GetActiveScene().buildIndex == 10)
+            {
+                levelCont.Reset();
+                SceneManager.LoadScene(0);
+                return;
+            }
+
+            if (SceneManager.GetActiveScene().buildIndex == 9)
+            {
+                SceneManager.LoadScene(10);
+                return;
+            }
+
             levelCont.currentHole++;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
@@ -105,27 +95,37 @@ public class ScorePanel : MonoBehaviour
 
         // Holes
 
-        scoreHole1.text = levelCont.GetHoleScore(0);
-        scoreHole2.text = levelCont.GetHoleScore(1);
-        scoreHole3.text = levelCont.GetHoleScore(2);
-        scoreHole4.text = levelCont.GetHoleScore(3);
-        scoreHole5.text = levelCont.GetHoleScore(4);
-        scoreHole6.text = levelCont.GetHoleScore(5);
-        scoreHole7.text = levelCont.GetHoleScore(6);
-        scoreHole8.text = levelCont.GetHoleScore(7);
-        scoreHole9.text = levelCont.GetHoleScore(8);
+        for (int x = 0; x < scoresHole.Length; x++)
+        {
+            var score = levelCont.GetHoleScore(x);
+            scoresHole[x].text = score.ToString();
+            if (score == 0)
+            {
+                scoresHole[x].text = "-";
+            }
+        }
 
-        toParHole1.text = levelCont.GetToPar(0);
-        toParHole2.text = levelCont.GetToPar(1);
-        toParHole3.text = levelCont.GetToPar(2);
-        toParHole4.text = levelCont.GetToPar(3);
-        toParHole5.text = levelCont.GetToPar(4);
-        toParHole6.text = levelCont.GetToPar(5);
-        toParHole7.text = levelCont.GetToPar(6);
-        toParHole8.text = levelCont.GetToPar(7);
-        toParHole9.text = levelCont.GetToPar(8);
+        for (int x = 0; x < levelCont.currentHole + 1; x++)
+        {
+            var score = levelCont.GetToPar(x);
+            scoresToPar[x].text = score.ToString();
+            if (score < 0)
+            {
+                scoresToPar[x].color = new Color32(230, 72, 46, 255);
+
+            }
+        }
+
+        var totToPar = levelCont.GetTotalToPar();
+        totalToPar.text = totToPar.ToString();
+        if(totToPar < 0)
+        {
+            totalToPar.color = new Color32(230, 72, 46, 255);
+        }
 
         totalScore.text = levelCont.GetTotalScore();
-        totalToPar.text = levelCont.GetTotalToPar();
+
+
+
     }
 }

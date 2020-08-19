@@ -231,7 +231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -35, y: -30}
+  m_AnchoredPosition: {x: -35, y: -20}
   m_SizeDelta: {x: 10, y: 14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7985140
@@ -10217,7 +10217,7 @@ RectTransform:
   m_GameObject: {fileID: 1286005589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 758413559}
   - {fileID: 2093105849}
@@ -10304,6 +10304,26 @@ MonoBehaviour:
   toParHole9: {fileID: 1980495249}
   totalScore: {fileID: 861600748}
   totalToPar: {fileID: 1006979979}
+  scoresHole:
+  - {fileID: 693460941}
+  - {fileID: 1019120666}
+  - {fileID: 93435797}
+  - {fileID: 1378016241}
+  - {fileID: 1362401712}
+  - {fileID: 161802528}
+  - {fileID: 1057759845}
+  - {fileID: 851849391}
+  - {fileID: 1980495249}
+  scoresToPar:
+  - {fileID: 916195385}
+  - {fileID: 128356216}
+  - {fileID: 1197594861}
+  - {fileID: 1712298757}
+  - {fileID: 1151334066}
+  - {fileID: 572764287}
+  - {fileID: 325060783}
+  - {fileID: 1581986573}
+  - {fileID: 1332270496}
 --- !u!1001 &1300645518
 PrefabInstance:
   m_ObjectHideFlags: 0

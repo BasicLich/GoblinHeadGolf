@@ -29,29 +29,14 @@ public class LevelController : MonoBehaviour
 
     }
 
-    public string GetHoleScore(int hole)
+    public int GetHoleScore(int hole)
     {
-        var score = scores[hole];
-        if(score == 0)
-        {
-            return "-";
-        } else
-        {
-            return score.ToString();
-        }
+        return scores[hole];
     }
 
-    public string GetToPar(int hole)
+    public int GetToPar(int hole)
     {
-        var score = scores[hole];
-        if (score == 0)
-        {
-            return "-";
-        }
-        else
-        {
-            return (score - pars[hole]).ToString(); 
-        }
+        return scores[hole] - pars[hole];
     }
 
     public string GetTotalScore()
@@ -65,7 +50,7 @@ public class LevelController : MonoBehaviour
         return sum.ToString();
     }
 
-    public string GetTotalToPar()
+    public int GetTotalToPar()
     {
         var sumHoles = 0;
         for (int i = 0; i < scores.Length; i++)
@@ -79,8 +64,29 @@ public class LevelController : MonoBehaviour
             sumPars += pars[i];
         }
 
-        return (sumHoles - sumPars).ToString();
+        return sumHoles - sumPars;
         
+    }
+
+    public int GetTotalScoreInt()
+    {
+        var sum = 0;
+        for (int i = 0; i < scores.Length; i++)
+        {
+            sum += scores[i];
+        }
+
+        return sum;
+    }
+
+    public void Reset()
+    {
+        currentHole = 0;
+        for (int i = 0; i < scores.Length; i++)
+        {
+            scores[i] = 0;
+        }
+
     }
 
 }

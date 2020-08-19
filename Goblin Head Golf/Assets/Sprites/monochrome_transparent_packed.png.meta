@@ -122,6 +122,9 @@ TextureImporter:
   - first:
       213: -2859331449831654184
     second: Grave2
+  - first:
+      213: 1733254694341893322
+    second: GroundSide
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1066,6 +1069,27 @@ TextureImporter:
       bones: []
       spriteID: 8dc7ead123d9158d0800000000000000
       internalID: -2859331449831654184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundSide
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 330
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accd68916f1cd0810800000000000000
+      internalID: 1733254694341893322
       vertices: []
       indices: 
       edges: []
