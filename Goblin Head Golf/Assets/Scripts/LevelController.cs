@@ -7,7 +7,7 @@ public class LevelController : MonoBehaviour
     public static LevelController instance;
 
     public int[] scores;
-    public int[] pars = { 3, 4, 3, 5, 4, 1, 1, 1, 1 };
+    public int[] pars = { 3, 4, 3, 5, 4, 5, 4, 3, 5 };
 
     public int currentHole = 0;
 
