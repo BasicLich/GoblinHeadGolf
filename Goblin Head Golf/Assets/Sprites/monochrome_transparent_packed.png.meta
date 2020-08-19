@@ -71,6 +71,27 @@ TextureImporter:
   - first:
       213: 7829609798139332992
     second: White
+  - first:
+      213: 8516609751470380444
+    second: Log1
+  - first:
+      213: 8000117828308700731
+    second: Log2
+  - first:
+      213: 2347369921621585979
+    second: Treetop1
+  - first:
+      213: 8049024241501034948
+    second: Treetop2
+  - first:
+      213: 8333053375100661828
+    second: SlopeRight
+  - first:
+      213: 3591798549798801462
+    second: SloperLeft
+  - first:
+      213: 2137583226918415056
+    second: Water
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -650,7 +671,7 @@ TextureImporter:
         width: 2
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -658,6 +679,153 @@ TextureImporter:
       bones: []
       spriteID: 089430cd0ac58ac60800000000000000
       internalID: 7829609798139332992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Log1
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 240
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95150f2273113670800000000000000
+      internalID: 8516609751470380444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Log2
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 240
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e0c9547c0260f60800000000000000
+      internalID: 8000117828308700731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treetop1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 257
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30f0beb188839020800000000000000
+      internalID: 2347369921621585979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treetop2
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 257
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c95d2fe6e0e3bf60800000000000000
+      internalID: 8049024241501034948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlopeRight
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440be3de4e3f4a370800000000000000
+      internalID: 8333053375100661828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SloperLeft
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630558930c1a8d130800000000000000
+      internalID: 3591798549798801462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 49
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da2e469e983aad10800000000000000
+      internalID: 2137583226918415056
       vertices: []
       indices: 
       edges: []

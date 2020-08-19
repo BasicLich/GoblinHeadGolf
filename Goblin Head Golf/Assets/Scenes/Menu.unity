@@ -295,6 +295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835a1c60adda32248a82d3059819048d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scores: 
+  pars: 030000000400000001000000010000000100000001000000010000000100000001000000
+  currentHole: 0
 --- !u!1 &481803460
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +429,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481803460}
   m_CullTransparentMesh: 0
+--- !u!1 &554275761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554275763}
+  - component: {fileID: 554275762}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &554275762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554275761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5655a2297eeb61842b08a241e65776fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: theme1
+    clip: {fileID: 8300000, guid: 6b352c307dfc51041aae96a84080cbb9, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: theme2
+    clip: {fileID: 8300000, guid: d50070c040940f645bf4f05d6a0a0593, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: swing
+    clip: {fileID: 8300000, guid: 5695f56549a848c4bbd0168ad8895a16, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: applause
+    clip: {fileID: 8300000, guid: cad8bd986305dd1428cff83df02ed1ce, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: fanfare
+    clip: {fileID: 8300000, guid: 19a588303de84c5458ec244bb5b618c5, type: 3}
+    volume: 0.9
+    pitch: 1
+    source: {fileID: 0}
+  - name: click
+    clip: {fileID: 8300000, guid: 5de8440379236a64f9ee1193a4b80308, type: 3}
+    volume: 0.9
+    pitch: 1
+    source: {fileID: 0}
+  - name: thud
+    clip: {fileID: 8300000, guid: e34e19da9d844b440866e347eb79a217, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &554275763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554275761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &953008739
 GameObject:
   m_ObjectHideFlags: 0
