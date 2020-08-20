@@ -35,6 +35,11 @@ public class Head : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("thud2");
         }
+
+        if(collision.gameObject.tag == "Edge")
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

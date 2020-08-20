@@ -8,13 +8,15 @@ public class UIMenu : MonoBehaviour
     public void PlayRound()
     {
         FindObjectOfType<AudioManager>().Play("click");
+        Cursor.visible = false;
         SceneManager.LoadScene(1);
     }
 
     public void DrivingRange()
     {
         FindObjectOfType<AudioManager>().Play("click");
-        SceneManager.LoadScene(12);
+        Cursor.visible = false;
+        SceneManager.LoadScene(11);
     }
 
     public void Quit()
@@ -23,8 +25,10 @@ public class UIMenu : MonoBehaviour
         Application.Quit();
     }
 
+    /* Debug 
     private void Update()
     {
+
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             SceneManager.LoadScene(1);
@@ -66,6 +70,7 @@ public class UIMenu : MonoBehaviour
         {
             SceneManager.LoadScene(9);
         }
-
+        
     }
+    */
 }

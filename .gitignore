@@ -2,8 +2,8 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
+/Goblin Head Golf/[Ll]ibrary/
+/Goblin Head Golf/[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
@@ -59,3 +59,5 @@ sysinfo.txt
 crashlytics-build.properties
 
 Goblin Head Golf/Temp/UnityLockfile
+*.resp
+Goblin Head Golf/Temp/StagingArea/Data/data.unity3d

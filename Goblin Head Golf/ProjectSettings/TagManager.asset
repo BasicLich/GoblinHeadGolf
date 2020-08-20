@@ -10,6 +10,7 @@ TagManager:
   - hard
   - water
   - tree
+  - Edge
   layers:
   - Default
   - TransparentFX

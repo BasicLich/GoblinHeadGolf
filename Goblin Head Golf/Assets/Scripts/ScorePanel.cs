@@ -24,11 +24,12 @@ public class ScorePanel : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(1))
         {
             if(SceneManager.GetActiveScene().buildIndex == 10)
             {
                 levelCont.Reset();
+                Cursor.visible = true;
                 SceneManager.LoadScene(0);
                 return;
             }

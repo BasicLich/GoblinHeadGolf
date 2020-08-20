@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameController : MonoBehaviour
@@ -19,6 +20,8 @@ public class GameController : MonoBehaviour
     public int points = 0;
 
     public GameObject scorePanel;
+    public GameObject exitPanel;
+    private bool exitActive = false;
 
     private bool hasWon = false;
 
@@ -27,6 +30,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         scorePanel.SetActive(false);
+        exitPanel.SetActive(false);
         UpdateUIImages();
         Instantiate(head, FindObjectOfType<Player>().headSpawn, Quaternion.Euler(0f, 0f, 270f));
         pointsText.text = points.ToString();
@@ -79,6 +83,33 @@ public class GameController : MonoBehaviour
             FindObjectOfType<Sword>().SetClubType();
             UpdateUIImages();
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape) && !exitActive)
+        {
+            exitPanel.SetActive(true);
+            exitActive = true;
+            Time.timeScale = 0f;
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && exitActive)
+        {
+            exitPanel.SetActive(false);
+            exitActive = false;
+            Time.timeScale = 1f;
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && exitActive)
+        {
+            Time.timeScale = 1f;
+            FindObjectOfType<LevelController>().Reset();
+            Cursor.visible = true;
+            SceneManager.LoadScene(0);
+            return;
+        }
+
+
     }
 
     private void UpdateUIImages()
