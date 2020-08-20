@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour
 
     public GameObject scorePanel;
 
+    private bool hasWon = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -97,10 +99,15 @@ public class GameController : MonoBehaviour
 
     public void Win()
     {
-        FindObjectOfType<AudioManager>().Play("fanfare");
-        FindObjectOfType<AudioManager>().Play("applause");
-        FindObjectOfType<Player>().hasWon = true;
-        scorePanel.SetActive(true);
-        scorePanel.GetComponent<ScorePanel>().SetPanel(points);
+        if(!hasWon)
+        {
+            FindObjectOfType<AudioManager>().Play("fanfare");
+            FindObjectOfType<AudioManager>().Play("applause");
+            FindObjectOfType<Player>().hasWon = true;
+            scorePanel.SetActive(true);
+            scorePanel.GetComponent<ScorePanel>().SetPanel(points);
+            hasWon = true;
+        }
+       
     }
 }

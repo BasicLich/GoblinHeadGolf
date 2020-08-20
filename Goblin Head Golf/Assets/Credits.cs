@@ -5,7 +5,6 @@ using UnityEngine;
 public class Credits : MonoBehaviour
 {
     public GameObject body;
-    public GameObject scorePanel;
 
     private void Start()
     {

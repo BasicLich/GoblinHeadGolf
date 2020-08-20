@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8146646372550938036}
   - component: {fileID: 8146646372550938027}
-  - component: {fileID: 8146646372550938026}
   - component: {fileID: 8146646372550938037}
-  - component: {fileID: 3913760657315846164}
   m_Layer: 0
   m_Name: Tree1
   m_TagString: Untagged
@@ -86,22 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8146646372550938026
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8146646372550938025}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.45}
-  serializedVersion: 2
-  m_Radius: 0.2
 --- !u!61 &8146646372550938037
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -128,26 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.109800726, y: 0.48817825}
   m_EdgeRadius: 0
---- !u!249 &3913760657315846164
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8146646372550938025}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGlobalAngle: 0
-  m_ForceAngle: 0
-  m_ForceMagnitude: 0
-  m_ForceVariation: 0
-  m_ForceTarget: 0
-  m_Drag: 6
-  m_AngularDrag: 6
 --- !u!1 &8146646374381806498
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,9 +120,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8146646374381806499}
   - component: {fileID: 8146646374381806508}
+  - component: {fileID: 5516125912675975487}
+  - component: {fileID: 4073214833571524809}
   m_Layer: 0
   m_Name: Treetop1
-  m_TagString: Untagged
+  m_TagString: tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,3 +194,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &5516125912675975487
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146646374381806498}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2
+--- !u!249 &4073214833571524809
+AreaEffector2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146646374381806498}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGlobalAngle: 0
+  m_ForceAngle: 0
+  m_ForceMagnitude: 0
+  m_ForceVariation: 0
+  m_ForceTarget: 0
+  m_Drag: 6
+  m_AngularDrag: 6

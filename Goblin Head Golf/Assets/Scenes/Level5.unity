@@ -8667,24 +8667,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topText: {fileID: 719836506}
-  scoreHole1: {fileID: 693460941}
-  toParHole1: {fileID: 916195385}
-  scoreHole2: {fileID: 1019120666}
-  toParHole2: {fileID: 128356216}
-  scoreHole3: {fileID: 93435797}
-  toParHole3: {fileID: 1197594861}
-  scoreHole4: {fileID: 1378016241}
-  toParHole4: {fileID: 1712298757}
-  scoreHole5: {fileID: 1362401712}
-  toParHole5: {fileID: 1151334066}
-  scoreHole6: {fileID: 161802528}
-  toParHole6: {fileID: 572764287}
-  scoreHole7: {fileID: 1057759845}
-  toParHole7: {fileID: 325060783}
-  scoreHole8: {fileID: 1581986573}
-  toParHole8: {fileID: 851849391}
-  scoreHole9: {fileID: 1332270496}
-  toParHole9: {fileID: 1980495249}
   totalScore: {fileID: 861600748}
   totalToPar: {fileID: 1006979979}
   scoresHole:
